@@ -1,0 +1,7 @@
+1). i) The first problem is noticed in the html of the code snippet. A div opening tag (<div>) is closed by a button closing tag (</button)
+    ii) The second problem comes from the getUserName function. Apparently the function is trying to return the property "name" of the value "user" which might be undefined owing to the fact that a subscription might take some time to return a value.
+2). i) For the first problem, simply replacing the button closing tag with a div closing tag or replacing the div opening tag with a button opening tag would solve it.
+    ii) For the second problem, there are quite a few ways to solve it:
+	a) Receive the user.name property in the subscription, ensuring that it does not return undefined.
+	b) Use the async pipe in your html template to handle the subscription instead of manually subscribing to the service
+3). Concerning the subscription, the drawbacks for the first method is that you have to manually unsubscribe using ngOnDestroy to avoid memory leaks. The async method is probably the cleanest way to go about handling single subscriptions, but if it were a case of nested subscriptions, the use of rxjs operators might probably be the better choice.
