@@ -2,7 +2,7 @@
     ii) Using Subjects in a service.
 2). i) pros: enables you send data between two related components in the component tree.
        cons: does not work between unrelated components, and if the two components are not parent and child, might lead to a nesting hell.
-    ii) pros: enables you send data between two components regardless of relationship; creates a very organized flow of data which makes the code very readable and reusable.
+    ii) pros: enables you send data between two components regardless of relationship; creates a very organized flow of data which makes the code very readable and reusable. Also it creates a multicast transmission of data so that all components are updated at the same time.
         cons: a service has to be created in order to do this.
 3). i) In a situation whereby a particular data only needs to be shared between parent and child, the second option might be unnecessary and overkill.
     ii) In a situation whereby a particular data needs to be shared between various components, this would be the best fit.
